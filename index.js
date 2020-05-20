@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const token = process.argv.length == 2 ? process.env.token : "NzEyNzUwMzczMTY5MDA0NjA0.XsWGzQ.aKd68Otlu2J1KNkjJdBVcYk170I";
+const token = process.env.token;
 const welcomeChannelName = "안녕하세요";
 const byeChannelName = "안녕히가세요";
 const welcomeChannelComment = "어서오세요.";
@@ -93,10 +93,10 @@ client.on('message', (message) => {
     }
   }
 
-  if(message.content.startsWith('!청소')) {
+  if(message.content.startsWith(';청소')) {
     if(checkPermission(message)) return
 
-    var clearLine = message.content.slice('!청소 '.length);
+    var clearLine = message.content.slice(';청소 '.length);
     var isNum = !isNaN(clearLine)
 
     if(isNum && (clearLine <= 0 || 100 < clearLine)) {
