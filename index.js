@@ -36,12 +36,6 @@ client.on('message', (message) => {
     return message.reply('pong');
   }
 
-  if(message.content == ';정보') {
-    let embed = new Discord.RichEmbed()
-      .addField('Inline field title', '이름')
-      .addField('Inline field title', '서버닉네임', true)
-  }
-
   if(message.content == ';bot') {
     let img = 'https://cdn.discordapp.com/attachments/712756439365583089/712769635207872532/decf02525ddfa072.jpg';
     let embed = new Discord.RichEmbed()
