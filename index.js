@@ -38,9 +38,8 @@ client.on('message', (message) => {
 
   if(message.content == ';정보') {
     let embed = new Discord.RichEmbed()
-      .addField(name="이름", value=meessage.author.name, inline=true)
-      .addField(name="서버닉네임", value=message.author.display_name, inline=true)
-      .addField(name="가입일", value=str(date.year) + "년" + str(date.month) + "월" + str(date.day) + "일", inline=true)
+      .addField('Inline field title', '이름')
+      .addField('Inline field title', '서버닉네임', true)
   }
 
   if(message.content == ';bot') {
