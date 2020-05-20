@@ -36,7 +36,7 @@ client.on('message', (message) => {
     return message.reply('pong');
   }
 
-  if(message.content == ';help') {
+  if(message.content == ';bot') {
     let img = 'https://cdn.discordapp.com/attachments/712756439365583089/712769635207872532/decf02525ddfa072.jpg';
     let embed = new Discord.RichEmbed()
       .setTitle('RankerGAMI Test BOT')
@@ -53,12 +53,12 @@ client.on('message', (message) => {
       .setFooter('Some footer text here', img)
 
     message.channel.send(embed)
-  } else if(message.content == 'embed2') {
+  } else if(message.content == ';help') {
     let helpImg = 'https://images-ext-1.discordapp.net/external/RyofVqSAVAi0H9-1yK6M8NGy2grU5TWZkLadG-rwqk0/https/i.imgur.com/EZRAPxR.png';
     let commandList = [
-      {name: 'ping', desc: '현재 핑 상태'},
+      {name: ';ping', desc: '현재 핑 상태'},
+      {name: ';bot', desc: '정보'},
       {name: ';help', desc: '명령어 보기'},
-      {name: 'embed2', desc: 'embed 예제2 (help)'},
       {name: '!전체공지', desc: 'dm으로 전체 공지 보내기'},
       {name: ';청소', desc: 'n개의 메세지 지우기'}
     ];
